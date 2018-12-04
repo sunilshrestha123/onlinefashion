@@ -1,0 +1,8 @@
+.register_body {
+  width: 25%;
+  border: 1px solid forestgreen;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f2f2f2;
+}

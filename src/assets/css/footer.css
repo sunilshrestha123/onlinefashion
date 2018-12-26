@@ -1,17 +1,19 @@
 .footer-style {
+  height: 250px;
   position: relative;
   padding: 20px;
   background-color: #333333;
   color: aliceblue;
-  border-top: 0;
-  bottom: 0;
-  left: 0;
 }
 .site-info {
-  position: inherit;
-  height: 5px;
-  width: 100px;
+  background: #08080b;
   text-align: center;
-  background-color: #3333;
   color: aliceblue;
+  padding: 2px 0;
+}
+.social-site {
+  background-color: #333333;
+  padding: 2px;
+  color: wheat;
+  text-align: center;
 }

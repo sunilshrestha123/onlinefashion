@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Mapsmy from './Mapsmy';
 import '../assets/css/footer.css';
 import { Col } from 'react-bootstrap';
 class Footer extends React.Component {
@@ -13,48 +13,38 @@ class Footer extends React.Component {
         <div className='footer-style'>
           <Col xs={6} md={4}>
             <h2>
-              <u>Services</u>
+              <u>About Us</u>
             </h2>
-            <p>buy in ilam fashion collection</p>
-            <p>sold in ilam fashion</p>
-            <p>Contact ilam fashion</p>
-            <p>about ilam fashion collection</p>
+            <p>About Us</p>
+            <p>Career</p>
+            <p>Corporate sales</p>
+            <p>Where to Buy</p>
           </Col>
           <Col xs={6} md={4}>
             <h2>
-              <u>Services</u>
+              <u>support</u>
             </h2>
-            <p>buy in ilam fashion collection</p>
-            <p>sold in ilam fashion</p>
-            <p>Contact ilam fashion</p>
-            <p>about ilam fashion collection</p>
+            <p>contact</p>
+            <p>return</p>
+            <p>Warrenty</p>
+            <p>help</p>
           </Col>
 
-          <Col xs={6} md={4}>
-            <h2>
-              <u>Services</u>
-            </h2>
-            <p>buy in ilam fashion collection</p>
-            <p>sold in ilam fashion</p>
-            <p>Contact ilam fashion</p>
-            <p>about ilam fashion collection</p>
+          <Col xs={12} md={6}>
+            <div />
           </Col>
         </div>
-        <div class='site-info'>
-          <div class='container text-center'>
-            <p>
-              Copyright © 2018&nbsp;{' '}
-              <a href='https://www.facebook.com/ilam027'>
-                Ilam Fashion Collection
-              </a>{' '}
-              | All Rights Reserved.
-            </p>
-
-            <p>
-              Design &amp; Developed By:{' '}
-              <a href='http://www.ilafashioncollection'>Techilam Pvt. Ltd.</a>
-            </p>
-          </div>
+        <div className='social-site'>
+          <h3>socaisocial_sil side link</h3>
+        </div>
+        <div className='site-info'>
+          <p>
+            Copyright © 2018&nbsp;{' '}
+            <a href='https://www.facebook.com/ilam027'>
+              Ilam Fashion Collection
+            </a>{' '}
+            | All Rights Reserved.
+          </p>
         </div>
       </div>
     );

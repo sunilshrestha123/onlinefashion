@@ -3,6 +3,10 @@ import React from 'react';
 import '../assets/css/register.css';
 import { registerUser } from '../service/userapi';
 class Register extends React.Component {
+  state = {
+    first_name: ''
+    // last_name:''
+  };
   onSubmit = async () => {
     console.log('here...');
     const firstName = document.getElementById('firstName').value;
@@ -15,11 +19,15 @@ class Register extends React.Component {
     if (isPasswordConfirmed) {
       const payload = {
         email: email,
-        username: firstName + '' + lastName,
+        // username: firstName + '' + lastName,
+        first_name: firstName,
+        last_name: lastName,
+
         password: password
       };
 
       //Api call
+
       const result = await registerUser(payload);
       if ((result.status = '201')) {
         alert('Successfully registered');

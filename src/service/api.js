@@ -2,9 +2,7 @@ import axios from 'axios';
 
 export async function getUsers() {
   try {
-    const response = await axios.get(
-      'https://us-central1-school-ef9c0.cloudfunctions.net/getUsers'
-    );
+    const response = await axios.get('http://localhost:3001/api/register');
     return response.data;
     console.log(response);
   } catch (error) {

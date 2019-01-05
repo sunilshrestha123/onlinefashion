@@ -12,7 +12,7 @@ export async function registerUser(data) {
 
 export async function register() {
   try {
-    const response = await axios.post('http://localhost:3002/api/register');
+    const response = await axios.get('http://localhost:3002/api/register');
     return response.data;
   } catch (e) {
     console.log(e);

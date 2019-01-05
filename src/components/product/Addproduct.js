@@ -11,6 +11,7 @@ import {
   Button,
   HelpBlock
 } from 'react-bootstrap';
+import { GetCategory } from '../../service/userapi';
 
 function FieldGroup({ id, label, help, ...props }) {
   return (
@@ -23,8 +24,23 @@ function FieldGroup({ id, label, help, ...props }) {
   );
 }
 
-class Login extends Component {
+class Addproduct extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: []
+    };
+  }
+  async componentDidMount() {
+    const result = await GetCategory();
+    console.log('my product actegory lis', result);
+    this.setState({ category: result.category });
+  }
   render() {
+    let value = this.state.category.map(items => (
+      <option key={items.id}>{items.category_name}</option>
+    ));
+
     return (
       <Grid>
         <Row className='show-grid'>
@@ -36,12 +52,11 @@ class Login extends Component {
                 label='Product Name'
                 placeholder='Enter the product name'
               />
-
               <FormGroup controlId='formControlsSelect'>
                 <ControlLabel>Category</ControlLabel>
                 <FormControl componentClass='select' placeholder='select'>
-                  <option value='select'>select</option>
-                  <option value='other'>...</option>
+                  <option>select</option>
+                  {value}
                 </FormControl>
               </FormGroup>
               <FormGroup controlId='formControlsSelect'>
@@ -160,4 +175,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Addproduct;

@@ -16,6 +16,8 @@ import Product from './components/product/Addproduct';
 import ContainedButtons from './components/product/Addproduct';
 import ShoppingItemCollection from './components/slider/ShppingItemCollection';
 import CustomizedTable from './components/users/DisplayUser';
+import ControlledCarousel from './components/body/Imageslides';
+import Subcategory from './components/product/Subcategory';
 
 import { register } from './service/userapi';
 import Category from './components/product/Category';
@@ -74,23 +76,24 @@ class App extends Component {
                   exact
                   path='/category'
                 />
+                <Route
+                  render={() => <Subcategory App='subcategory' />}
+                  exact
+                  path='/subcategory'
+                />
               </div>
             </div>
+
+            <Subcategory />
+
+            <ControlledCarousel />
             <Displaycategory />
+
             <ShoppingItemCollection />
             <ContainedButtons />
             <CustomizedTable />
             <User />
-            {/* {this.state.users.map(items => {
-              return (
-                <div>
-                  <h1>{items.email}</h1>
-                  <h1>{items.first_name}</h1>
-                  <h1>{items.last_name}</h1>
-                  <h1>{items.password}</h1>
-                </div>
-              );
-            })} */}
+
             <Footer />
           </div>
         </Router>
